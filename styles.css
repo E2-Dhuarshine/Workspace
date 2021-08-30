@@ -1,0 +1,262 @@
+/* common styles */
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+
+/* common styles */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #045de9;
+    background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+    font-family: sans-serif;
+
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #c5e7b2;
+}
+
+ul {
+    list-style-type: none;
+    /* get rid of bullet points on side of list items */
+}
+
+
+/* common style ends */
+
+
+/* container */
+
+.container {
+    min-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.6rem;
+    text-align: center;
+    line-height: 1;
+    color:white;
+    font-family: 'Rampart One', cursive;
+}
+
+
+/* todo-form */
+
+.todo-form {
+    margin: 40px 0px;
+}
+
+.todo-input {
+    width: 550px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.add-button {
+    outline: none;
+    border: none;
+    height: 35px;
+    border-radius: 5px;
+    width: 50px;
+    background-color: lime;
+    color: white;
+    cursor: pointer;
+    transition: .5s;
+    margin: 0.25rem;
+}
+.add-button:hover{
+	opacity: 0.7;
+	box-shadow: 0 5px 50px 0 #15f4ee inset,0 5px 50px 0 #15f4ee,
+	            0 5px 50px 0 #15f4ee inset,0 5px 50px 0 #15f4ee;
+
+	text-shadow: 0 0 5px;		
+
+}
+
+/* todo-form style ends */
+
+
+/* todo-items */
+
+.todo-items {
+    min-width: 150%;
+}
+
+
+/* each li with class="item" */
+
+.item {
+    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+    padding: 10px;
+    font-size: 1.1rem;
+    border: 5px solid aliceblue;
+}
+
+.item:first-child {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.item:last-child {
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+
+/* item style end */
+
+.checkbox {
+        margin-right: 10px;
+        width: 20px;
+        height:20px;
+      }
+.card{
+    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+    padding: 10px;
+    font-size: 1.1rem;
+    text-align: center;
+    font-family: 'Besley', serif;
+    font-weight: bold;
+}
+.delete-button {
+    float: right;
+    background-color:rgb(236, 110, 72) ;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    padding: 2px 5px;
+    color: #fff;
+    margin-left: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.edit {
+    float: right;
+    background-color:rgb(104, 117, 238) ;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    padding: 2px 5px;
+    color: #fff;
+    margin-left: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+button {
+    background-color:rgb(104, 117, 238) ;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    padding: 3px 3px;
+    color: #fff;
+    margin-left: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    
+}
+.btn{
+    background-color:aliceblue;
+    border: none;
+    outline: none;
+    border-radius: 35px;
+    padding: 3px 13px;
+    color: rgb(104, 117, 238);
+    margin-left: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 30px;
+}
+.btn1{
+    background-color:aliceblue;
+    border: none;
+    outline: none;
+    border-radius: 35px;
+    padding: 3px 23px;
+    color: rgb(236, 110, 72);
+    margin-left: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+/* applied when the todo item is checked */
+
+.checked {
+    text-decoration: line-through;
+}
+.notes {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 15px;
+    color: white;
+  }
+  #modalInput{
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 30px;
+    margin-right: 10px;
+    font-size: 1rem;
+
+  }
+  a{
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    color:white;
+  }
+  p{
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+  }
+  .modal{
+    width: 25%;
+    height: 25%;
+    overflow: hidden;
+    background-color: #045de9;
+    background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+    box-shadow: 0 0 10px black;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    z-index: 9999;
+    padding: 10px;
+    text-align: center;
+    display: none;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+ 
+ 
