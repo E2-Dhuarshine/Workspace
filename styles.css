@@ -148,7 +148,7 @@ h1 {
     color: #fff;
     margin-left: 10px;
     font-size: 1.1rem;
-    font-weight: bold;
+   
 }
 .edit {
     float: right;
@@ -160,7 +160,7 @@ h1 {
     color: #fff;
     margin-left: 10px;
     font-size: 1.1rem;
-    font-weight: bold;
+   
 }
 
 button {
@@ -172,7 +172,7 @@ button {
     color: #fff;
     margin-left: 10px;
     font-size: 1.1rem;
-    font-weight: bold;
+   
     
 }
 .btn{
@@ -184,7 +184,6 @@ button {
     color: rgb(104, 117, 238);
     margin-left: 10px;
     font-size: 1.1rem;
-    font-weight: bold;
     margin-top: 30px;
 }
 .btn1{
@@ -196,7 +195,6 @@ button {
     color: rgb(236, 110, 72);
     margin-left: 10px;
     font-size: 1.1rem;
-    font-weight: bold;
     margin-top: 50px;
 }
 
