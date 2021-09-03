@@ -1,4 +1,3 @@
-//localStorage.clear();
 const todoForm = document.querySelector('.todo-form');
 const todoInput = document.querySelector('.todo-input');
 const todoItemsList = document.querySelector('.todo-items');
@@ -20,13 +19,8 @@ todoForm.addEventListener('submit', function(event) {
 
 // function to add todo
 function addTodo(item) {
-    if (item.length=='') {
-        var message=document.querySelector("p");
-        message.innerHTML="Type something to add task";
-        setTimeout(function(){message.innerHTML=""},1500);
-      } 
      // if item is not empty
-    else(item !== '') 
+    if(item !== '') 
     {
         const todo = {
             // make a todo object, which has id, name, and completed properties
@@ -39,6 +33,14 @@ function addTodo(item) {
         addToLocalStorage(todos);// then store it in localStorage
         todoInput.value = '';// finally clear the input box value
     }
+    else{
+        item =='';
+       notify.innerHTML = "Alert! Your task is Empty,Please Enter Your Task";
+        setTimeout(function () {
+          notify.innerHTML = "";
+        }, 2000);}
+  
+      
 }
 // function to render given todos to screen
 function renderTodos(todos) {
@@ -142,7 +144,7 @@ function getFromLocalStorage() {
 // toggle the value to completed and not completed
 function toggle(id) {
     todos.forEach(function(item) {
-        // use == not ===, because here types are different. One is number and other is string
+        // use ==, because here types are different. One is number and other is string
         if (item.id == id) {
             item.completed = !item.completed;
         }
@@ -171,10 +173,4 @@ todoItemsList.addEventListener('click', function(event) {
         // toggle the state
         toggle(event.target.parentElement.getAttribute('data-key'));
     }
-
-    // check if that is a delete-button
-    // if (event.target.classList.contains('delete-button')) {
-    //     // get id from data-key attribute's value of parent <li> where the delete-button is present
-    //     deleteTodo(event.target.parentElement.getAttribute('data-key'));
-    // }
 });
